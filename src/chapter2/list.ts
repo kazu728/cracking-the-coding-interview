@@ -1,7 +1,7 @@
 import { assertEquals } from "../deps.ts";
 
 export class Linkedlist<T> {
-  constructor(public readonly value: T, public next?: Linkedlist<T>) {}
+  constructor(public value: T, public next?: Linkedlist<T>) {}
 }
 
 export const genLinkedlist = <T>(l: T[]): Linkedlist<T> => {
