@@ -1,0 +1,16 @@
+name: Check
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '18.x'
+      - name: install elm, elm-test
+        run: npm install -g elm elm-test
+      - name: run test
+        run: elm-test
