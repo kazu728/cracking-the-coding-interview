@@ -50,4 +50,8 @@ suite =
                 in
                 Chapter2.LinkedList.genNode [ 3, 5, 8, 5, 10, 2, 1 ]
                     |> Expect.equal input
+        , test "reverse" <|
+            \_ ->
+                Chapter2.LinkedList.reverse (Chapter2.LinkedList.genNode [ 3, 5, 8, 5, 10, 2, 1 ])
+                    |> Expect.equal (Chapter2.LinkedList.genNode [ 1, 2, 10, 5, 8, 5, 3 ])
         ]
