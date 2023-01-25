@@ -3,7 +3,7 @@ module Chapter3.Q1 exposing (..)
 import Chapter3.Stack exposing (Stack)
 
 
-genMultiStack : List a -> ( Stack a, Stack a, Stack a )
+genMultiStack : Stack a -> ( Stack a, Stack a, Stack a )
 genMultiStack l =
     let
         ( a, b ) =
